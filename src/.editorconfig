@@ -1,0 +1,15 @@
+[*.cs]
+charset = utf-8-bom
+indent_style = tab
+tab_width = 2
+insert_final_newline = true
+
+# ReSharper properties
+resharper_csharp_wrap_after_declaration_lpar = true
+resharper_csharp_wrap_parameters_style = chop_if_long
+
+[*.csproj]
+charset = utf-8-bom
+indent_style = tab
+tab_width = 2
+insert_final_newline = true
