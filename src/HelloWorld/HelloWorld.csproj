@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+		<PropertyGroup>
+				<TargetFramework>net5.0</TargetFramework>
+				<Nullable>enable</Nullable>
+				<LangVersion>9</LangVersion>
+				<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		</PropertyGroup>
+
+		<PropertyGroup>
+				<IncludeSymbols>true</IncludeSymbols>
+				<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+				<IncludeSource>true</IncludeSource>
+				<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		</PropertyGroup>
+
+		<PropertyGroup>
+				<PackageVersion>0.1.0</PackageVersion>
+				<RootNamespace>IV.PowerShell.HelloWorld</RootNamespace>
+				<Title>Hello World (PowerShell Binary Module)</Title>
+				<Authors>Ilya Vassyutovich</Authors>
+				<RepositoryUrl>
+						https://github.com/IlyaVassyutovich/pwsh-hello-world
+				</RepositoryUrl>
+				<RepositoryType>git</RepositoryType>
+				<PackageLicenseUrl>
+						https://github.com/IlyaVassyutovich/pwsh-hello-world/blob/main/LICENSE.md
+				</PackageLicenseUrl>
+		</PropertyGroup>
+
+		<ItemGroup>
+				<PackageReference Include="JetBrains.Annotations" Version="2020.3.0"/>
+				<PackageReference Include="System.Management.Automation" Version="7.1.1"/>
+		</ItemGroup>
+
+		<ItemGroup>
+				<None Remove="pwsh-hello-world.psd1"/>
+				<Content Include="pwsh-hello-world.psd1">
+						<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+				</Content>
+		</ItemGroup>
+
+</Project>
